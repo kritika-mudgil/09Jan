@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Column Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        header {
+            grid-row: 1 / 2;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .content {
+            grid-row: 2 / 3;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .content .text {
+            background: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #ddd;
+        }
+
+        .content .image {
+            background: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+        }
+
+        .content .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            grid-row: 3 / 4;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Responsive Grid Layout</h1>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2>Text Section</h2>
+                <p>A good example of a paragraph contains a topic sentence, details and a conclusion. 'There are many different kinds of animals that live in China. Tigers and leopards are animals that live in China's forests in the north. In the jungles, monkeys swing in the trees and elephants walk through the brush..</p>
+            </div>
+            <div class="image">
+                <img src="download.jpeg" alt="Placeholder Image">
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2025 </p>
+        </footer>
+    </div>
+</body>
+</html>
