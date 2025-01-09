@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item p {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="image1.jpeg" alt="Image 1">
+            <p>"Happiness held is the seed; Happiness shared is the flower.”– John Harrigan</p>
+        </div>
+        <div class="gallery-item">
+            <img src="image2.jpeg" alt="Image 2">
+            <p>“Love is the flower you’ve got to let grow.” - John Lennon</p>
+        </div>
+        <div class="gallery-item">
+            <img src="image3.jpeg" alt="Image 3">
+            <p>“If you look the right way, you can see that the whole world is a garden.”– Frances Hodgson Burnett</p>
+        </div>
+        <div class="gallery-item">
+            <img src="image4.jpeg" alt="Image 4">
+            <p>“Take time to smell the roses.”– Proverb</p>
+        </div>
+        <div class="gallery-item">
+            <img src="image5.jpg" alt="Image 5">
+            <p>“Love is like wildflowers; it’s often found in the most unlikely places.”– Ralph Waldo Emerson</p>
+        </div>
+        <div class="gallery-item">
+            <img src="image6.jpeg" alt="Image 6">
+            <p>“A flower cannot blossom without sunshine, and a man cannot live without love.” – Max Muller</p>
+        </div>
+        <div class="gallery-item">
+            <img src="image7.jpeg" alt="Image 7">
+            <p>“There are always flowers for those who want to see them.”– Henri Matisse</p>
+        </div>
+        <div class="gallery-item">
+            <img src="image8.jpeg" alt="Image 8">
+            <p>“Life is the flower for which love is the honey.” – Victor Hugo</p>
+        </div>
+        <div class="gallery-item">
+            <img src="image9.jpeg" alt="Image 9">
+            <p>“If you tend to a flower, it will bloom, no matter how many weeds surround it.”– Matshona Dhliwayo</p>
+        </div>
+    </div>
+</body>
+</html>
